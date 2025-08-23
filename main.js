@@ -90,4 +90,6 @@ function playGame(){
 
 }
 
+alert(`Rock Paper Scissors:
+        #5 Rounds `)
 playGame()
