@@ -31,7 +31,7 @@ function playRound(humanChoice, computerChoice) {
         ------------------------------
          Computer : paper     Score:${computerScore}
                 
-         You Loose! Paper Beats Rock.`
+         😔You Loose! Paper Beats Rock.`
             }
             else if (humanChoice == "rock" && computerChoice == "scissors") {
                 humanScore += 1;
@@ -39,10 +39,10 @@ function playRound(humanChoice, computerChoice) {
         ------------------------------
          Computer : scissors     Score:${computerScore}
                 
-         You Win! Rock Beats Scissors.`
+         🏆You Win! Rock Beats Scissors.`
             }
             else {
-                 message = `You      : rock      Score:${humanScore} 
+                message = `You      : rock      Score:${humanScore} 
         ------------------------------
          Computer : rock     Score:${computerScore}
                 
@@ -56,7 +56,7 @@ function playRound(humanChoice, computerChoice) {
         ------------------------------
          Computer : rock     Score:${computerScore}
                 
-         You Win! Paper Beats Rock.`
+         🏆You Win! Paper Beats Rock.`
             }
             else if (humanChoice == "paper" && computerChoice == "scissors") {
                 computerScore += 1;
@@ -64,11 +64,11 @@ function playRound(humanChoice, computerChoice) {
         ------------------------------
          Computer : scissors    Score:${computerScore}
                 
-         You Loose! Scissors Beats Paper.`
-                
+         😔You Loose! Scissors Beats Paper.`
+
             }
             else {
-                 message = `You      : paper      Score:${humanScore} 
+                message = `You      : paper      Score:${humanScore} 
         ------------------------------
          Computer : paper     Score:${computerScore}
                 
@@ -82,8 +82,8 @@ function playRound(humanChoice, computerChoice) {
         ------------------------------
          Computer : paper    Score:${computerScore}
                 
-         You Win! Scissors Beats Paper.`
-                
+         🏆You Win! Scissors Beats Paper.`
+
             }
             else if (humanChoice == "scissors" && computerChoice == "rock") {
                 message = ""
@@ -92,11 +92,11 @@ function playRound(humanChoice, computerChoice) {
         ------------------------------
          Computer : rock    Score:${computerScore}
                 
-         You Lose! Rock Beats Scissors.`
-                
+         😔You Lose! Rock Beats Scissors.`
+
             }
             else {
-                 message = `You      : scissors      Score:${humanScore} 
+                message = `You      : scissors      Score:${humanScore} 
         ------------------------------
          Computer : scissors     Score:${computerScore}
                 
