@@ -18,7 +18,7 @@ function getComputerChoice() {
 }
 function getHumanCoice() {
     let humanChoice = window.prompt("Enter the Input:", "rock|paper|scissors")
-    return humanChoice.toLowerCase();
+    return humanChoice;
 }
 
 function playRound(humanChoice, computerChoice) {
