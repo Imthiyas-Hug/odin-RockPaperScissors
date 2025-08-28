@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 style="text-align: center;">Rock Paper Scissors: Console Game</h1>
+    <div class="container">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <div class="display">
+            <div>
+                <p style="font-size: 2em;">You : <span id="yourScore" style="font-weight: 800;">0</span></p>
+                <p id="yourChoice" style="font-weight: 600;font-size: 2em;"></p>
+            </div>
+            <div>
+                <p style="font-size: 2em;">Computer : <span id="pcScore" style="font-weight: 800;">0</span></p>
+                <p id="pcChoice" style="font-weight: 600;font-size: 2em;"></p>
+            </div>
+        </div>
+
+        <div class="result"></div>
+
+        <div class="buttons">
+            <button class="btn" id="rock">ROCK</button>
+            <button class="btn" id="paper">PAPER</button>
+            <button class="btn" id="scissors">SCISSORS</button>
+        </div>
+
+        <button id="playAgain">PLAY AGAIN!</button>
+
+    </div>
+
     <script src="main.js"></script>
 </body>
+
 </html>
