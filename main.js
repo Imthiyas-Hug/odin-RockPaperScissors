@@ -35,7 +35,7 @@ function playRound(humanChoice, computerChoice) {
                 computerScore += 1;
                 yourChoice.textContent = "🪨Rock"
                 pcChoice.textContent = "📃Paper"
-                result.textContent = `😔You Loose!`
+                result.textContent = `😔Computer +1 Point!`
                 result.style = "color:red;font-weight: 700;font-size: 3em;"
                 pcScore.textContent = computerScore;
             }
@@ -43,7 +43,7 @@ function playRound(humanChoice, computerChoice) {
                 humanScore += 1;
                 yourChoice.textContent = "🪨Rock"
                 pcChoice.textContent = "✂️Scissors"
-                result.textContent = `🏆You Win!`
+                result.textContent = `You: +1 Point`
                 result.style = "color:green;font-weight: 700;font-size: 3em;"
                 yourScore.textContent = humanScore;
             }
@@ -59,7 +59,7 @@ function playRound(humanChoice, computerChoice) {
                 humanScore += 1;
                 yourChoice.textContent = "📃Paper"
                 pcChoice.textContent = "🪨Rock"
-                result.textContent = `🏆You Win!`
+                result.textContent = `You: +1 Point`
                 result.style = "color:green;font-weight: 700;font-size: 3em;"
                 yourScore.textContent = humanScore;
             }
@@ -67,7 +67,7 @@ function playRound(humanChoice, computerChoice) {
                 computerScore += 1;
                 yourChoice.textContent = "📃Paper"
                 pcChoice.textContent = "✂️Scissors"
-                result.textContent = `😔You Loose!`
+                result.textContent = `😔Computer +1 Point!`
                 result.style = "color:red;font-weight: 700;font-size: 3em;"
                 pcScore.textContent = computerScore;
             }
@@ -83,7 +83,7 @@ function playRound(humanChoice, computerChoice) {
                 humanScore += 1;
                 yourChoice.textContent = "✂️Scissors"
                 pcChoice.textContent = "📃Paper"
-                result.textContent = `🏆You Win!`
+                result.textContent = `You: +1 Point`
                 result.style = "color:green;font-weight: 700;font-size: 3em;"
                 yourScore.textContent = humanScore;
             }
@@ -91,7 +91,7 @@ function playRound(humanChoice, computerChoice) {
                 computerScore += 1;
                 yourChoice.textContent = "✂️Scissors"
                 pcChoice.textContent = "🪨Rock"
-                result.textContent = `😔You Loose!`
+                result.textContent = `😔Computer +1 Point!`
                 result.style = "color:red;font-weight: 700;font-size: 3em;"
                 pcScore.textContent = computerScore;
             }
@@ -104,17 +104,14 @@ function playRound(humanChoice, computerChoice) {
             break;
 
     }
-    if (humanScore > computerScore && humanScore == 5) {
-        alert("🫵YOU WON THE GAME!");
+    if (humanScore > 4) {
+        result.textContent = "🫵YOU WON THE GAME!";
         playAgainBtn.style = "visibility:visible;"
-        humanScore = 0;
-        computerScore = 0;
     }
-    if (computerScore > humanScore && computerScore == 5) {
-        alert("💻COMPUTER WON THE GAME!");
+    if (computerScore > 4) {
+        result.textContent = "💻COMPUTER WON THE GAME!";
         playAgainBtn.style = "visibility:visible;"
-        humanScore = 0;
-        computerScore = 0;
+       
     }
 
 }
@@ -128,6 +125,9 @@ playAgainBtn.style = "visibility: hidden;"
 buttons.forEach((button) => {
     let humanChoice = button.textContent;
     button.addEventListener("click", (e) => {
+        if(humanScore>4 || computerScore > 4){
+            return;
+        }
         playRound(humanChoice, getComputerChoice());
     })
 
