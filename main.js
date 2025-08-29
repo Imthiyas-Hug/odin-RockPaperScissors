@@ -105,11 +105,11 @@ function playRound(humanChoice, computerChoice) {
 
     }
     if (humanScore > 4) {
-        result.textContent = "🫵YOU WON THE GAME!";
+        result.textContent = "🫵YOU WON THE GAME!🏆";
         playAgainBtn.style = "visibility:visible;"
     }
     if (computerScore > 4) {
-        result.textContent = "💻COMPUTER WON THE GAME!";
+        result.textContent = "💻COMPUTER WON THE GAME!😔";
         playAgainBtn.style = "visibility:visible;"
        
     }
